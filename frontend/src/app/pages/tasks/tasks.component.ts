@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'
 import { ListViewComponent } from './list-view/list-view.component'
 import { KanbanViewComponent } from './kanban-view/kanban-view.component'
 import { PageHeaderComponent } from './components/page-header/page-header.component'
+import { KANBAN_ITEMS } from './const/tasks.const'
 
 export type VIEW_MODE = 'list' | 'kanban'
 
@@ -19,7 +20,7 @@ export type VIEW_MODE = 'list' | 'kanban'
   styleUrl: './tasks.component.css',
 })
 export class TasksComponent {
-  viewMode: VIEW_MODE = 'list'
+  viewMode: VIEW_MODE = KANBAN_ITEMS[1].mode
 
   onViewModeChange(mode: VIEW_MODE) {
     this.viewMode = mode

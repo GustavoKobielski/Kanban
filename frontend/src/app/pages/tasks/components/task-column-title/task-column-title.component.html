@@ -1,0 +1,14 @@
+<div
+  class="text-white rounded-full flex items-center justify-between p-1.5"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+>
+  <div class="flex items-center gap-2">
+    <span
+      class="rounded-full bg-white py-1.5 px-3 font-semibold"
+      [ngStyle]="{ color: colorCount }"
+      >{{ count }}</span
+    >
+    <h2 class="font-bold text-base">{{ title }}</h2>
+  </div>
+  <span class="material-icons mr-1">add</span>
+</div>

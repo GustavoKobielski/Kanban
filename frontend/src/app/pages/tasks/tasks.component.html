@@ -1,12 +1,12 @@
 <div class="h-full flex flex-col">
   <app-page-header (viewMode)="onViewModeChange($event)"></app-page-header>
 
-  <div class="flex-1 h-full">
+  <div>
     <div *ngIf="viewMode === 'list'">
       <app-list-view></app-list-view>
     </div>
     <div *ngIf="viewMode === 'kanban'">
-      <app-kanban-view></app-kanban-view>
+      <app-kanban-view class="overflow-scroll"></app-kanban-view>
     </div>
   </div>
 </div>
