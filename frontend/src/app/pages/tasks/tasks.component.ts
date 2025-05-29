@@ -20,7 +20,7 @@ export type VIEW_MODE = 'list' | 'kanban'
   styleUrl: './tasks.component.css',
 })
 export class TasksComponent {
-  viewMode: VIEW_MODE = KANBAN_ITEMS[1].mode
+  viewMode: VIEW_MODE = KANBAN_ITEMS[0].mode
 
   onViewModeChange(mode: VIEW_MODE) {
     this.viewMode = mode

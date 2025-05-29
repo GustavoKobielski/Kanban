@@ -1,1 +1,30 @@
-<p>list-view works!</p>
+<div
+  class="p-4 grid grid-cols-1 gap-5 overflow-y-auto"
+  style="height: calc(100vh - 160px)"
+>
+  @for (column of TASK_COLUMN_TITLES; track column.title) {
+    <div class="bg-[#f5f8fa] rounded-[32px] p-3 h-fit">
+      <app-task-column-title
+        [title]="column.title"
+        [count]="column.count"
+        [backgroundColor]="column.backgroundColor"
+        [colorCount]="column.countColor"
+      ></app-task-column-title>
+
+      <div class="flex flex-col gap-3 mt-3.5">
+        @for (task of getTasksByColumn(column.title); track task.title) {
+          <div class="flex flex-col gap-2.5">
+            <app-task-card
+              [priorites]="task.priorites"
+              [title]="task.title"
+              [description]="task.description"
+              [users]="task.users"
+              [comments]="task.comments"
+              [completed]="task.completed"
+            ></app-task-card>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

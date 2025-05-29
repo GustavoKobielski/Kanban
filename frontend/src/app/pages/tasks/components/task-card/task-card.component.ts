@@ -9,7 +9,7 @@ import { Priorites, Users } from '../../const/task-card.const'
   templateUrl: './task-card.component.html',
   styleUrl: './task-card.component.css',
 })
-export class TaskCardComponent {
+export class taskCardComponent {
   @Input() priorites: Priorites[] = []
   @Input() title = ''
   @Input() description = ''

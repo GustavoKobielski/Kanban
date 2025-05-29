@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common'
 export class PageHeaderComponent {
   @Output() viewMode = new EventEmitter<VIEW_MODE>()
   ITENS_KANBAN = KANBAN_ITEMS
-  selectedMode: VIEW_MODE = this.ITENS_KANBAN[1].mode
+  selectedMode: VIEW_MODE = this.ITENS_KANBAN[0].mode
 
   switchMode(mode: VIEW_MODE) {
     this.viewMode.emit(mode)
