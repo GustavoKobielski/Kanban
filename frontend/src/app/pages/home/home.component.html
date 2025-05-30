@@ -1,1 +1,93 @@
-<p>home works!</p>
+<div class="grid grid-cols-2 grid-rows-2 gap-4 h-full">
+  <div class="bg-white rounded-2xl shadow-lg p-4 h-full flex flex-col">
+    <h1 class="text-3xl font-bold">Welcome, User</h1>
+    <h2 class="text-lg text-gray-500 mt-2">
+      This is your central Kanban board, designed to help you visualize, track,
+      and manage your work efficiently
+    </h2>
+    <div class="border-t border-gray-200 my-6"></div>
+    <h2 class="text-lg font-medium">Current Kanban Cards</h2>
+    <div class="flex flex-col flex-1 min-h-0 items-center justify-center">
+      <div class="flex items-center justify-center gap-10 text-lg">
+        <div class="text-center">
+          <p class="text-gray-500 font-medium">In Progress</p>
+          <p class="font-semibold">3</p>
+        </div>
+        <div class="text-center">
+          <p class="text-gray-500 font-medium">Reviewed</p>
+          <p class="font-semibold">5</p>
+        </div>
+        <div class="text-center">
+          <p class="text-gray-500 font-medium">Completed</p>
+          <p class="font-semibold">7</p>
+        </div>
+        <apx-chart
+          class="h-full block"
+          [series]="lineChartOptions.series!"
+          [chart]="lineChartOptions.chart!"
+          [xaxis]="lineChartOptions.xaxis!"
+          [dataLabels]="lineChartOptions.dataLabels!"
+          [grid]="lineChartOptions.grid!"
+          [stroke]="lineChartOptions.stroke!"
+          [title]="lineChartOptions.title!"
+        ></apx-chart>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 grid-rows-2 gap-4 h-full">
+    <app-card-info
+      [title]="'Total Tasks of all Sprints'"
+      [description]="false"
+      [totalTasks]="605"
+      [inProgressTasks]="330"
+      [reviewedTasks]="275"
+      [completedTasks]="30"
+    ></app-card-info>
+
+    <div class="row-span-2">
+      <app-card-info
+        [title]="'Total Tasks'"
+        [description]="true"
+        [totalTasks]="100"
+        [inProgressTasks]="20"
+        [reviewedTasks]="6"
+        [completedTasks]="2"
+      ></app-card-info>
+    </div>
+
+    <app-card-info
+      [title]="'Total Tasks'"
+      [description]="true"
+      [totalTasks]="100"
+      [inProgressTasks]="20"
+      [reviewedTasks]="6"
+      [completedTasks]="2"
+    ></app-card-info>
+  </div>
+
+  <div class="h-full shadow-lg rounded-2xl bg-white p-4">
+    <apx-chart
+      class="h-full block"
+      [series]="lineChartOptions.series!"
+      [chart]="lineChartOptions.chart!"
+      [xaxis]="lineChartOptions.xaxis!"
+      [dataLabels]="lineChartOptions.dataLabels!"
+      [grid]="lineChartOptions.grid!"
+      [stroke]="lineChartOptions.stroke!"
+      [title]="lineChartOptions.title!"
+    ></apx-chart>
+  </div>
+
+  <div class="h-full shadow-lg rounded-2xl bg-white p-4">
+    <apx-chart
+      class="h-full block"
+      [series]="lineChartOptions.series!"
+      [chart]="lineChartOptions.chart!"
+      [xaxis]="lineChartOptions.xaxis!"
+      [dataLabels]="lineChartOptions.dataLabels!"
+      [grid]="lineChartOptions.grid!"
+      [stroke]="lineChartOptions.stroke!"
+      [title]="lineChartOptions.title!"
+    ></apx-chart>
+  </div>
+</div>

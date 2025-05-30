@@ -3,7 +3,7 @@
   style="height: calc(100vh - 160px)"
 >
   @for (column of TASK_COLUMN_TITLES; track column.title) {
-    <div class="bg-[#f5f8fa] rounded-[32px] p-3 h-fit min-h-full">
+    <div class="bg-slate-100 rounded-[32px] p-3 h-fit min-h-full">
       <app-task-column-title
         [title]="column.title"
         [count]="column.count"
